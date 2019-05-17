@@ -129,7 +129,17 @@ if (navigator.onLine) {
   	}).then(function(response) {
   		console.log('server response', response)
   		if(response.status < 400) {
-  			clearIdb();
+        fetch('https://qrcode.wearesqood.com:3000/send-email', {
+        // fetch('http://localhost:3000/send-email', {
+          headers: headers,
+          method: 'POST',
+          body: JSON.stringify(result)
+        }).then(function(response) {
+          console.log('server response', response)
+          if(response.status < 400) {
+            clearIdb();
+          }
+        })
   		}
   	})
   });
