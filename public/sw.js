@@ -122,7 +122,7 @@ if (navigator.onLine) {
   		'Content-Type': 'application/json'
   	}
     if(result[0]) {
-    	fetch('https://qrcode.wearesqood.com:3000/add-bio', {
+    	fetch('https://qrcode.wearesqood.com:3001/add-bio', {
       // fetch('http://localhost:3000/add-bio', {
     		headers: headers,
     		method: 'POST',
@@ -131,7 +131,7 @@ if (navigator.onLine) {
     		console.log('server response', response)
     		if(response.status < 400) {
           console.log(result);
-          fetch('https://qrcode.wearesqood.com:3000/send-email', {
+          fetch('https://qrcode.wearesqood.com:3001/send-email', {
           // fetch('http://localhost:3000/send-email', {
             headers: headers,
             method: 'POST',
