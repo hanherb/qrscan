@@ -77,7 +77,7 @@
       this.session = this.$session.get('user');
     },
     logout() {
-      this.axios.get(address + ":3000/logout").then((response) => {
+      this.axios.get(address + ":3001/logout").then((response) => {
         alert("Successfully Logged Out");
         basicFunction.deleteAllCookies();
         this.$session.destroy();
