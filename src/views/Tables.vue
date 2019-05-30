@@ -49,7 +49,7 @@ export default {
 
   methods: {
     fetchBio() {
-      this.axios.get(address + ':3000/get-bio', headers)
+      this.axios.get(address + ':3001/get-bio', headers)
       .then((response) => {
         this.bios = response.data;
       });

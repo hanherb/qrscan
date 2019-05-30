@@ -75,7 +75,7 @@ export default {
             authority: this.input.authority,
             password: this.input.password
           };
-          this.axios.post(address + ':3000/register-user', postObj)
+          this.axios.post(address + ':3001/register-user', postObj)
           .then((response) => {
             let query = `mutation createSingleUser($input:PersonInput) {
                 createUser(input: $input) {

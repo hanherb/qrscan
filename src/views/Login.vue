@@ -47,7 +47,7 @@ export default {
   methods: {
     login() {
       if(this.input.email != "" && this.input.password != "") {
-        this.axios.post(address + ':3000/login-user', {
+        this.axios.post(address + ':3001/login-user', {
           email: this.input.email, 
           password: this.input.password
         })
